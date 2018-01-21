@@ -8,8 +8,8 @@ url = "http://www.lokmat.com/"
 
 page = urllib.request.urlopen(url)
 soup = BeautifulSoup(page, 'html.parser')
-news = soup.find('div', class_='featured-live-news ticker-container')
+news = soup.find('ul', class_='live-news-list')
 
-for i in news.findAll('div'):
+for i in news.findAll('li'):
 	data = i.text
 	print(data)
