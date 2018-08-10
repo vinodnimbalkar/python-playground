@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+#my custom folder and file
+Calls/CallRecorders
+Calls/call_data.csv
