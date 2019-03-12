@@ -1,3 +1,3 @@
 # python-playground
 Simple python scripts and experiments </br>
-#1 marathi_news.py "Read Marathi latest news headline on your console"
+This Respository is made to quickly smash some coding and get hands dirty with it.
