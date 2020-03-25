@@ -16,7 +16,7 @@ def messageWA():
         name = df.iloc[i,0]
         try:
             #Message to send peoples
-            msg = "May this Diwali your life be as colourful and bright as the lights of Diwali. Joy and gaiety surround you and your family forever. Happy Diwali!"
+            msg = f' Dear {name}, May this Diwali your life be as colourful and bright as the lights of Diwali. Joy and gaiety surround you and your family forever. Happy Diwali!'
             #Number of time send above message
             count = 1
 
@@ -26,7 +26,7 @@ def messageWA():
             time.sleep(3)
 
             #Search contact list people available on whatsapp or not
-            search_box = driver.find_element_by_class_name('jN-F5')
+            search_box = driver.find_element_by_class_name('_3u328')
             search_box.send_keys(str(name))
             time.sleep(3)
             try:
@@ -36,17 +36,16 @@ def messageWA():
                 time.sleep(3)
             except:
                 #if User not available on whatsapp, back to initial screen
-                backButton = driver.find_element_by_class_name('_1aTxu')
+                backButton = driver.find_element_by_class_name('qfKkX')
                 backButton.click()
                 time.sleep(3)
                 continue
             try:
-                msg_box = driver.find_element_by_class_name('_2S1VP')
-
-                #Loop for number of type above message send
+                msg_box = driver.find_element_by_class_name('_13mgZ')
+                #Loop for number of time above message send
                 for i in range(count):
                     msg_box.send_keys(msg)
-                    button = driver.find_element_by_class_name('_35EW6')
+                    button = driver.find_element_by_class_name('_3M-N-')
                     button.click()
                     #Create log text file of successfully sent message with user name
                     with open("successSend.txt", "a") as successLog:
