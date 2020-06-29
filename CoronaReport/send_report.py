@@ -14,7 +14,7 @@ from credentials import *
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
 TODAY_DATE = date.today().strftime('%d%m%Y')
-REPORT_LINK = f'COVID-19_Report_dated_on_{TODAY_DATE}_NMMC1.pdf'
+REPORT_LINK = f'COVID-19_Report_dated_on_{TODAY_DATE}_NMMC.pdf'
 
 if not os.path.exists('./Report'):
     os.makedirs('./Report')
